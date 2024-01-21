@@ -1,0 +1,111 @@
+.wrapper{
+    padding: 0 3vw;
+    min-height: 90vh;
+    display: flex;
+}
+
+.left{
+    width: 50%;
+    padding: 12vw 5vw 0vw 5vw;
+}
+
+.left h1{
+    font-family: wal-black;
+    text-transform: uppercase;
+    font-size: 7vmax;
+    line-height: 4vmax;
+}
+
+.left h1 span{
+    font-family: saol;
+    font-size: 2vmax;
+    text-transform: lowercase;
+}
+
+.left p{
+    font-family: wal-light;
+    font-size: 1rem;
+    width: 80%;
+    padding-top: 2vw;
+}
+
+.right{
+    width: 50%;
+    background-color: #FCEADB;
+    padding: 5vw 5vw;
+    border-radius: 1rem;
+}
+
+.right h2{ 
+    font-family: wal-black;
+    color: #404627;
+    text-transform: uppercase;
+    font-size: 3vmax;
+}
+
+.right form{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 2vw;
+}
+
+.right form h3{
+    color: #404627;
+    font-family: wal-black;
+    text-transform: uppercase;
+    font-size: 1.5vmax;
+
+}
+
+.right form input{
+    width: 100%;
+    padding: .8vw 0vw .8vw .8vw;
+    margin-bottom: 2vw;
+    margin-top: .5vw;
+    font-family: wal-light;
+    font-size: 1vmax;
+    background: transparent;
+    border: 1px solid #00000026;
+}
+
+.right form button{
+    padding: 1rem 1.2rem;
+    font-family: wal-med;
+    font-size: 1rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    background: #C4B84E;
+    color: #250000;
+    border: 1px solid transparent;
+    border-radius: .2rem;
+    transition: all ease .2s;
+}
+
+.right form button:hover{
+    background: transparent;
+    color: #C4B84E;
+    border: 1px solid #C4B84E;
+}
+
+.right hr{
+    border: 1px solid #404627;
+    margin-top: 5vw;
+}
+
+.register_container{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2vw;
+}
+
+.register_container p{
+    color: #404627;
+    text-transform: uppercase;
+    font-family: wal-med;
+}
+
+.register_container p:nth-of-type(2){
+    border-bottom: 1px solid #00000052;
+    padding-bottom: .2rem;
+}

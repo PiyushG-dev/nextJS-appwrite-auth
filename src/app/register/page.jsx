@@ -7,30 +7,45 @@ const Register = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   return (
-    <div className={styles.container}>
-      <form>
-        <label>Register form</label>
-        <input
-          type="text"
-          placeholder="name"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-        />
-        <input
-          type="email"
-          placeholder="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-        <input
-          type="password"
-          placeholder="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
-        <button>login</button>
-      </form>
-    </div>
+    <main className={styles.wrapper}>
+      <div className={styles.left}>
+        <h1>
+          Create <span>an</span> account
+        </h1>
+        <p>
+          Sign back in into the most sophisticated authentication system in this
+          world built in next
+        </p>
+      </div>
+      <div className={styles.right}>
+        <form>
+          <h3>email</h3>
+          <input
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          <h3>full name</h3>
+          <input
+            type="email"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
+          <h3>password</h3>
+          <input
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+          <button>create account</button>
+        </form>
+        <hr />
+        <div className={styles.register_container}>
+          <p>Already have an account?</p>
+          <p>log in</p>
+        </div>
+      </div>
+    </main>
   );
 };
 

@@ -34,6 +34,10 @@ const Login = () => {
           <button>login</button>
         </form>
         <hr />
+        <div className={styles.register_container}>
+          <p>don't have an account?</p>
+          <p>register</p>
+        </div>
       </div>
     </main>
   );
