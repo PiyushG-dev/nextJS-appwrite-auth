@@ -1,0 +1,9 @@
+.wrapper{
+    padding: 10vw 3vw;
+    min-height: 100vh;
+    font-family: wal-black;
+    font-size: 8vw;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+}

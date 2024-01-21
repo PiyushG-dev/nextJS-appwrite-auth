@@ -1,9 +1,27 @@
+@font-face {
+  font-family: saol;
+  src: url(./fonts/6495b5b58227bec7a38a60bf_SaolDisplay-LightItalic.woff2);
+}
+@font-face {
+  font-family: wal-med;
+  src: url(./fonts/6495b5f457711b1e2f7b696d_GT-Walsheim-Condensed-Medium.woff2);
+}
+
+@font-face {
+  font-family: wal-light;
+  src: url(./fonts/6495b6937024ec4143cf4de5_GT-Walsheim-Light.woff2);
+}
+@font-face {
+  font-family: wal-black;
+  src: url(./fonts/64971659caaed8880ff693d8_GT-Walsheim-Condensed-Black.woff2);
+}
+
 *{
   padding: 0;
   margin: 0;
 }
 
 body{
-  background: #000000;
-  color: #ffffff;
+  background: #292B0C;
+  color: #F9DCC5;
 }
