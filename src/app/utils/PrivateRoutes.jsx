@@ -1,9 +1,9 @@
 "use client";
 import React from "react";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 
 const PrivateRoutes = ({ children }) => {
-  const user = true;
+  const user = false;
   const router = useRouter();
 
   return <>{user ? children : router.replace("/login")}</>;

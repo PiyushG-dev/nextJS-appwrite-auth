@@ -73,9 +73,8 @@
     border-color: #00000052;
     outline: none; 
     box-shadow: 0 0 5px rgba(180, 180, 180, 0.5); 
-  }
+}
   
-
 .right form button{
     padding: 1rem 1.2rem;
     font-family: wal-med;
