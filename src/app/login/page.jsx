@@ -1,10 +1,12 @@
 "use client";
 import React, { useState } from "react";
 import styles from "../styles/Login.module.css";
+import { useRouter } from "next/navigation";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const router = useRouter();
 
   return (
     <main className={styles.wrapper}>
@@ -36,7 +38,7 @@ const Login = () => {
         <hr />
         <div className={styles.register_container}>
           <p>don't have an account?</p>
-          <p>register</p>
+          <p onClick={() => router.push("/register")}>register</p>
         </div>
       </div>
     </main>

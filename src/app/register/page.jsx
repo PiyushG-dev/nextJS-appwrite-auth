@@ -1,11 +1,13 @@
 "use client";
 import React, { useState } from "react";
 import styles from "../styles/Register.module.css";
+import { useRouter } from "next/navigation";
 
 const Register = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const router = useRouter();
   return (
     <main className={styles.wrapper}>
       <div className={styles.left}>
@@ -40,9 +42,9 @@ const Register = () => {
           <button>create account</button>
         </form>
         <hr />
-        <div className={styles.register_container}>
+        <div className={styles.login_container}>
           <p>Already have an account?</p>
-          <p>log in</p>
+          <p onClick={() => router.push("/login")}>log in</p>
         </div>
       </div>
     </main>
