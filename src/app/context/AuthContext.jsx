@@ -11,6 +11,7 @@ const AuthContextProvider = ({ children }) => {
   useEffect(() => {}, []);
 
   const loginUser = async (userInfo) => {
+    setLoading(true);
     try {
       const response = await account.createEmailSession(
         userInfo.email,
@@ -21,6 +22,14 @@ const AuthContextProvider = ({ children }) => {
     } catch (err) {
       console.error(err);
     }
+    setLoading(false);
+  };
+
+  const logoutUser = async (userInfo) => {
+    setLoading(true);
+    await account.deleteSession("current");
+    setUser(null);
+    setLoading(false);
   };
 
   return <AuthContext.Provider>{children}</AuthContext.Provider>;
