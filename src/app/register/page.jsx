@@ -1,13 +1,22 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import styles from "../styles/Register.module.css";
 import { useRouter } from "next/navigation";
+import { AuthContext } from "../context/AuthContext";
 
 const Register = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const router = useRouter();
+  const { registerUser } = useContext(AuthContext);
+
+  const handleRegister = (e) => {
+    e.preventDefault();
+    const userInfo = { email, password, name };
+    registerUser(userInfo);
+  };
+
   return (
     <main className={styles.wrapper}>
       <div className={styles.left}>
@@ -39,7 +48,7 @@ const Register = () => {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
-          <button>create account</button>
+          <button onClick={handleRegister}>create account</button>
         </form>
         <hr />
         <div className={styles.login_container}>

@@ -1,12 +1,20 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import styles from "../styles/Login.module.css";
 import { useRouter } from "next/navigation";
+import { AuthContext } from "../context/AuthContext";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const router = useRouter();
+  const { loginUser } = useContext(AuthContext);
+
+  const handleLogin = (e) => {
+    e.preventDefault();
+    const userInfo = { email, password };
+    loginUser(userInfo);
+  };
 
   return (
     <main className={styles.wrapper}>
@@ -33,7 +41,7 @@ const Login = () => {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
-          <button>login</button>
+          <button onClick={handleLogin}>login</button>
         </form>
         <hr />
         <div className={styles.register_container}>

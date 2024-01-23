@@ -1,9 +1,29 @@
 .wrapper{
-    padding: 15vw 3vw 0vw 3vw;
+    padding: 0vw 3vw 0vw 3vw;
     min-height: 90vh;
     font-family: wal-black;
-    font-size: 8vmax;
+    font-size: 5vmax;
     text-transform: uppercase;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+}
+
+.wrapper button{
+    padding: 1rem 1.2rem;
+    font-family: wal-med;
+    font-size: 1rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    background: #C4B84E;
+    color: #250000;
+    border: 1px solid transparent;
+    border-radius: .2rem;
+    transition: all ease .2s;
+}
+.wrapper button:hover{
+    background: transparent;
+    color: #C4B84E;
+    border: 1px solid #C4B84E;
 }

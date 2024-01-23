@@ -1,14 +1,20 @@
 "use client";
-import React from "react";
+import React, { useContext } from "react";
 import styles from "../styles/Navbar.module.css";
 import Link from "next/link";
+import { AuthContext } from "../context/AuthContext";
 
 const Navbar = () => {
+  const { user } = useContext(AuthContext);
   return (
     <div className={styles.container}>
       <h1 className={styles.logo}>auth</h1>
       <div className={styles.navigation}>
-        <Link className={styles.link} href="/">
+        <Link
+          style={{ display: user ? "block" : "none" }}
+          className={styles.link}
+          href="/"
+        >
           Home
         </Link>
         <Link className={styles.link} href="/login">
