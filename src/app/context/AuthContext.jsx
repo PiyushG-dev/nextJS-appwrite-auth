@@ -8,7 +8,9 @@ const AuthContextProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
   const [user, setUser] = useState(null);
 
-  useEffect(() => {}, []);
+  useEffect(() => {
+    checkUserStatus();
+  }, []);
 
   const loginUser = async (userInfo) => {
     setLoading(true);
@@ -47,6 +49,13 @@ const AuthContextProvider = ({ children }) => {
     } catch (err) {
       console.error(err);
     }
+    setLoading(false);
+  };
+
+  const checkUserStatus = async () => {
+    setLoading(true);
+    const accountDetails = await account.get();
+    setUser(accountDetails);
     setLoading(false);
   };
 
