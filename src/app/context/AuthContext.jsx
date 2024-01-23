@@ -3,6 +3,7 @@ import { createContext, useState, useEffect } from "react";
 import { account } from "../appwrite/auth";
 import { ID } from "appwrite";
 import { useRouter } from "next/navigation";
+import Loader from "../components/Loader";
 
 export const AuthContext = createContext();
 
@@ -77,7 +78,7 @@ const AuthContextProvider = ({ children }) => {
 
   return (
     <AuthContext.Provider value={contextValue}>
-      {loading ? <p>loading...</p> : children}
+      {loading ? <Loader /> : children}
     </AuthContext.Provider>
   );
 };

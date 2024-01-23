@@ -1,0 +1,21 @@
+.wrapper{
+    height: 100vh;
+    background-color:#292B0C;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loader{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.loader p{
+    text-transform: uppercase;
+    font-family: wal-med;
+    font-size: 1.5rem;
+}
+
