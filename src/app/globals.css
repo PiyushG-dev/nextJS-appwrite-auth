@@ -26,6 +26,23 @@ body{
   color: #F9DCC5;
 }
 
+.link{
+  color: #F9DCC5;
+  font-family: wal-med;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all ease-in .2s ;
+}
+
+.link:hover{
+  color: #ffffff;
+}
+
+.active{
+  color: #ffffff;
+}
+
 ::-webkit-scrollbar {
   width: 8px;
 }

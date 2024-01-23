@@ -8,12 +8,18 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const router = useRouter();
-  const { loginUser } = useContext(AuthContext);
+  const { loginUser, notify } = useContext(AuthContext);
 
   const handleLogin = (e) => {
     e.preventDefault();
     const userInfo = { email, password };
-    loginUser(userInfo);
+    if (email && password) {
+      loginUser(userInfo);
+    } else {
+      notify("🥸 are you dumb?");
+      setEmail("");
+      setPassword("");
+    }
   };
 
   return (

@@ -4,6 +4,8 @@ import { account } from "../appwrite/auth";
 import { ID } from "appwrite";
 import { useRouter } from "next/navigation";
 import Loader from "../components/Loader";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export const AuthContext = createContext();
 
@@ -11,6 +13,19 @@ const AuthContextProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
   const [user, setUser] = useState(null);
   const router = useRouter();
+
+  const notify = (msg) => {
+    toast(`${msg}`, {
+      position: "bottom-left",
+      autoClose: 1000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: false,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+    });
+  };
 
   useEffect(() => {
     checkUserStatus();
@@ -26,6 +41,7 @@ const AuthContextProvider = ({ children }) => {
       const accountDetails = await account.get();
       setUser(accountDetails);
       router.replace("/");
+      notify("🥺 Welcome!");
     } catch (err) {
       console.error(err);
     }
@@ -37,6 +53,7 @@ const AuthContextProvider = ({ children }) => {
     await account.deleteSession("current");
     setUser(null);
     setLoading(false);
+    notify("😤 ok bye");
   };
 
   const registerUser = async (userInfo) => {
@@ -53,6 +70,7 @@ const AuthContextProvider = ({ children }) => {
       const accountDetails = await account.get();
       setUser(accountDetails);
       router.replace("/");
+      notify("🥺 Welcome!");
     } catch (err) {
       console.error(err);
     }
@@ -74,11 +92,24 @@ const AuthContextProvider = ({ children }) => {
     loginUser,
     logoutUser,
     registerUser,
+    notify,
   };
 
   return (
     <AuthContext.Provider value={contextValue}>
       {loading ? <Loader /> : children}
+      <ToastContainer
+        position="bottom-left"
+        autoClose={1000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover={false}
+        theme="dark"
+      />
     </AuthContext.Provider>
   );
 };

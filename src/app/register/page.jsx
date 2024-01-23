@@ -9,12 +9,19 @@ const Register = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const router = useRouter();
-  const { registerUser } = useContext(AuthContext);
+  const { registerUser, notify } = useContext(AuthContext);
 
   const handleRegister = (e) => {
     e.preventDefault();
     const userInfo = { email, password, name };
-    registerUser(userInfo);
+    if (email && password && name) {
+      registerUser(userInfo);
+    } else {
+      notify("🥸 are you dumb?");
+      setEmail("");
+      setPassword("");
+      setName("");
+    }
   };
 
   return (
