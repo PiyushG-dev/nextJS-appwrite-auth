@@ -25,10 +25,28 @@ const AuthContextProvider = ({ children }) => {
     setLoading(false);
   };
 
-  const logoutUser = async (userInfo) => {
+  const logoutUser = async () => {
     setLoading(true);
     await account.deleteSession("current");
     setUser(null);
+    setLoading(false);
+  };
+
+  const registerUser = async (userInfo) => {
+    setLoading(true);
+    try {
+      const response = await account.create(
+        userInfo.email,
+        userInfo.password,
+        userInfo.name
+      );
+
+      await account.createEmailSession(userInfo.email, userInfo.password);
+      const accountDetails = await account.get();
+      setUser(accountDetails);
+    } catch (err) {
+      console.error(err);
+    }
     setLoading(false);
   };
 
