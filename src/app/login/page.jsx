@@ -16,7 +16,7 @@ const Login = () => {
     if (email && password) {
       loginUser(userInfo);
     } else {
-      notify("🥸 are you dumb?");
+      notify("🥸 fill all the spaces, duh?");
       setEmail("");
       setPassword("");
     }
@@ -33,26 +33,28 @@ const Login = () => {
         </p>
       </div>
       <div className={styles.right}>
-        <h2>your account</h2>
-        <form>
-          <h3>email</h3>
-          <input
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-          <h3>password</h3>
-          <input
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-          <button onClick={handleLogin}>login</button>
-        </form>
-        <hr />
-        <div className={styles.register_container}>
-          <p>don't have an account?</p>
-          <p onClick={() => router.push("/register")}>register</p>
+        <div className={styles.right_container}>
+          <h2>your account</h2>
+          <form>
+            <h3>email</h3>
+            <input
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+            <h3>password</h3>
+            <input
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+            <button onClick={handleLogin}>login</button>
+          </form>
+          <hr />
+          <div className={styles.register_container}>
+            <p>don't have an account?</p>
+            <p onClick={() => router.push("/register")}>register</p>
+          </div>
         </div>
       </div>
     </main>

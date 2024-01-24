@@ -2,11 +2,12 @@
     padding: 0 3vw;
     min-height: 90vh;
     display: flex;
+    align-items: center;
 }
 
 .left{
     width: 50%;
-    padding: 12vw 5vw 0vw 5vw;
+    padding: 0vw 0vw 0vw 5vw;
 }
 
 .left h1{
@@ -31,26 +32,29 @@
 
 .right{
     width: 50%;
+}
+
+.right_container{
     background-color: #FCEADB;
-    padding: 5vw 5vw;
+    padding: 3vw 5vw;
     border-radius: 1rem;
 }
 
-.right h2{ 
+.right_container h2{ 
     font-family: wal-black;
     color: #404627;
     text-transform: uppercase;
     font-size: 3vmax;
 }
 
-.right form{
+.right_container form{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     padding-top: 2vw;
 }
 
-.right form h3{
+.right_container form h3{
     color: #404627;
     font-family: wal-black;
     text-transform: uppercase;
@@ -58,24 +62,24 @@
 
 }
 
-.right form input{
+.right_container form input{
     width: 100%;
-    padding: .8vw 0vw .8vw .8vw;
+    padding: .6vw 0vw .8vw .6vw;
     margin-bottom: 2vw;
     margin-top: .5vw;
     font-family: wal-light;
-    font-size: 1vmax;
+    font-size: 1.5vmax;
     background: transparent;
     border: 1px solid #00000026;
 }
 
-.right form input:focus {
+.right_container form input:focus {
     border-color: #00000052;
     outline: none; 
     box-shadow: 0 0 5px rgba(180, 180, 180, 0.5); 
 }
   
-.right form button{
+.right_container form button{
     padding: 1rem 1.2rem;
     font-family: wal-med;
     font-size: 1rem;
@@ -88,13 +92,13 @@
     transition: all ease .2s;
 }
 
-.right form button:hover{
+.right_container form button:hover{
     background: transparent;
     color: #C4B84E;
     border: 1px solid #C4B84E;
 }
 
-.right hr{
+.right_container hr{
     border: 1px solid #404627;
     margin-top: 5vw;
 }

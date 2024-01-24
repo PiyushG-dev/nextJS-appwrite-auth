@@ -17,7 +17,7 @@ const Register = () => {
     if (email && password && name) {
       registerUser(userInfo);
     } else {
-      notify("🥸 are you dumb?");
+      notify("🥸 fill all the spaces, duh?");
       setEmail("");
       setPassword("");
       setName("");
@@ -36,31 +36,33 @@ const Register = () => {
         </p>
       </div>
       <div className={styles.right}>
-        <form>
-          <h3>email</h3>
-          <input
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-          <h3>full name</h3>
-          <input
-            type="email"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-          />
-          <h3>password</h3>
-          <input
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-          <button onClick={handleRegister}>create account</button>
-        </form>
-        <hr />
-        <div className={styles.login_container}>
-          <p>Already have an account?</p>
-          <p onClick={() => router.push("/login")}>log in</p>
+        <div className={styles.right_container}>
+          <form>
+            <h3>email</h3>
+            <input
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+            <h3>full name</h3>
+            <input
+              type="email"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+            />
+            <h3>password</h3>
+            <input
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+            <button onClick={handleRegister}>create account</button>
+          </form>
+          <hr />
+          <div className={styles.login_container}>
+            <p>Already have an account?</p>
+            <p onClick={() => router.push("/login")}>log in</p>
+          </div>
         </div>
       </div>
     </main>

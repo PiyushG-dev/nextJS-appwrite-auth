@@ -12,7 +12,6 @@ const Home = () => {
         <h1>Welcome to Auth</h1>
         <button onClick={logoutUser}>logout</button>
       </main>
-      ;
     </PrivateRoutes>
   );
 };
