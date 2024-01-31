@@ -31,8 +31,8 @@ const Register = () => {
           Create <span>an</span> account
         </h1>
         <p>
-          Sign back in into the most sophisticated authentication system in this
-          world built in next
+          Welcome to the most sophisticated authentication system in this world
+          built in next
         </p>
       </div>
       <div className={styles.right}>

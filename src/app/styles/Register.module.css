@@ -37,7 +37,7 @@
 .right_container{
     background-color: #FCEADB;
     padding: 3vw 5vw;
-    border-radius: 1rem;
+    border-radius: .5rem;
 }
 
 .right_container h2{ 
