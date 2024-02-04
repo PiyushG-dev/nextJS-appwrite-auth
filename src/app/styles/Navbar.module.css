@@ -27,9 +27,3 @@
 .link:hover{
     color: #ffffff;
 }
-
-@media (max-width:1000px){
-  .container{
-    padding: 2vw 3vw;
-  }
-}
