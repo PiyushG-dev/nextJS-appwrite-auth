@@ -160,3 +160,51 @@
   
 }
 
+@media (max-width:750px){
+    .left{
+        width: 70%;
+    }
+
+    .left p:nth-of-type(1){
+        font-size: 3vmax;
+    }
+   
+    .left p:nth-of-type(2){
+        font-size: 2.5vmax;
+    }
+   
+     .left h1{
+        font-size: 12vw;
+        line-height: 11vw;
+     }
+     .right{
+        width: 95%;
+     }
+
+     .right_container{
+        padding-top: 8vw;
+        padding-bottom: 15vw;
+        border-radius: .1vw;
+     }
+
+     .right_container h2{
+        font-size: 5.5vw;
+     }
+
+     .right_container form h3{
+        font-size: 3vmax;
+    }
+
+    .right_container form{
+        padding-bottom: 3vw;
+    }
+
+     .right_container form input{
+        padding-top: 3vw;
+        padding-bottom: 3vw;
+     } 
+
+     .right_container form button{
+        margin-top: 5vw;
+     }
+}
