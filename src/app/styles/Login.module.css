@@ -154,13 +154,18 @@
     }
 
     .right_container form input{
-        padding-top: 1.8vw;
-        padding-bottom:1.8vw;
+        padding-top: 1.5vw;
+        padding-bottom:1.5vw;
+        font-size: 2.5vw;
     }
   
 }
 
 @media (max-width:750px){
+    .wrapper{
+        padding-top: 10vw;
+    }
+
     .left{
         width: 70%;
     }
@@ -200,8 +205,9 @@
     }
 
      .right_container form input{
-        padding-top: 3vw;
-        padding-bottom: 3vw;
+        padding-top: 2.5vw;
+        padding-bottom: 2.5vw;
+        font-size: 3.5vw;
      } 
 
      .right_container form button{
